@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Multimarcas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="cadastroForm">
+            <h1>Formulário (Pessoa Física)</h1>
+    
+        <section class="dados-consorciado">
+            <h2>DADOS DO CONSORCIADO</h2>
+            <div class="form-group">
+                <label for="nomeCliente">Nome do Cliente:</label>
+                <input type="text" id="nomeCliente" name="nomeCliente">
+            </div>
+            <div class="form-group">
+                <label for="emailCliente">E-mail do Cliente:</label>
+                <input type="email" id="emailCliente" name="emailCliente">
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="telefone1">Telefone(s) do Cliente 1:</label>
+                    <input type="text" id="telefone1" name="telefone1">
+                </div>
+                <div class="form-group">
+                    <label for="telefone2">Telefone(s) do Cliente 2:</label>
+                    <input type="text" id="telefone2" name="telefone2">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="rg">RG e órgão Emissor:</label>
+                    <input type="text" id="rg" name="rg">
+                </div>
+                <div class="form-group">
+                    <label for="nacionalidade">Nacionalidade:</label>
+                    <input type="text" id="nacionalidade" name="nacionalidade">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="naturalidade">Naturalidade:</label>
+                    <input type="text" id="naturalidade" name="naturalidade">
+                </div>
+                <div class="form-group">
+                    <label for="estadoCivil">Estado Civil:</label>
+                    <select id="estadoCivil" name="estadoCivil">
+                        <option value="">Selecione</option>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                        <option value="viuvo">Viúvo(a)</option>
+
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-row" id="conjugeFields" style="display: none;">
+                <div class="form-group">
+                    <label for="nomeConjuge">Nome do Cônjuge:</label>
+                    <input type="text" id="nomeConjuge" name="nomeConjuge">
+                </div>
+                <div class="form-group">
+                    <label for="cpfConjuge">CPF do Cônjuge:</label>
+                    <input type="text" id="cpfConjuge" name="cpfConjuge">
+                </div>
+                
+            </div>
+            <div class="form-group">
+                <label for="rendimentoTitular" type="number">Rendimento do titular:</label>
+                <input type="text" id="rendimentoTitular" name="rendimentoTitular">
+            </div>
+            <div class="form-group">
+                <label for="filiacao">Filiação:</label>
+                <input type="text" id="filiacao" name="filiacao">
+            </div>
+        </section>
+
+        <section class="dados-do-plano">
+            <h2>DADOS DO PLANO</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="parcelasEmbutidas">Parcelas Embutidas:</label>
+                    <input type="number" id="parcelasEmbutidas" name="parcelasEmbutidas">
+                </div>
+                <div class="form-group">
+                    <label for="dataAssembleia">Data da Assembleia:</label>
+                    <input type="date" id="dataAssembleia" name="dataAssembleia">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pagIncorporado">Pag. Incorporado:</label>
+                    <input type="number" id="pagIncorporado" name="pagIncorporado">
+                </div>
+                <div class="form-group">
+                    <label for="valorParcela">Valor da Parcela:</label>
+                    <input type="number" id="valorParcela" name="valorParcela">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="valorCredito">Valor do Crédito:</label>
+                    <input type="number" id="valorCredito" name="valorCredito">
+                </div>
+                <div class="form-group">
+                    <label for="grupoDuracao">Grupo e Duração:</label>
+                    <input type="number" id="grupoDuracao" name="grupoDuracao">
+                </div>
+            </div>
+        </section>
+
+        <section class="dados-endereco">
+            <h2>DADOS DE ENDEREÇO PARA BOLETOS</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cep">CEP:</label>
+                    <input type="text" id="cep" name="cep">
+                </div>
+                <div class="form-group">
+                    <label for="ruaAv">Rua/Av:</label>
+                    <input type="text" id="ruaAv" name="ruaAv">
+                </div>
+                <div class="form-group">
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" id="bairro" name="bairro">
+                </div>
+                <div class="form-group">
+                    <label for="numero">N°:</label>
+                    <input type="text" id="numero" name="numero">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" id="cidade" name="cidade">
+                </div>
+                <div class="form-group">
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado">
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="dados-bancarios">
+            <h2>DADOS BANCÁRIOS</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tipoConta">Tipo de Conta:</label>
+                    <select id="tipoConta" name="tipoConta">
+                        <option value="">Selecione</option>
+                        <option value="corrente">Corrente</option>
+                        <option value="poupanca">Poupança</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="banco">Banco:</label>
+                    <input type="text" id="banco" name="banco">
+                </div>
+                <div class="form-group">
+                    <label for="agencia">Agência:</label>
+                    <input type="text" id="agencia" name="agencia">
+                </div>
+                <div class="form-group">
+                    <label for="conta">Conta:</label>
+                    <input type="text" id="conta" name="conta">
+                </div>
+            </div>
+        </section>
+
+        <section class="pessoa-politicamente-exposta">
+            <h2>PESSOA POLITICAMENTE EXPOSTA?</h2>
+            <label>
+                <input type="radio" name="ppe" value="sim"> SIM
+            </label>
+            <label>
+                <input type="radio" name="ppe" value="nao" checked> NÃO
+            </label>
+        </section>
+
+        <section class="dados-do-pagamento">
+            <h2>DADOS DO PAGAMENTO</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tipoPagamento">Tipo de Pagamento:</label>
+                    <input type="text" id="tipoPagamento" name="tipoPagamento">
+                </div>
+                <div class="form-group">
+                    <label for="valorPagamento">Valor do Pagamento:</label>
+                    <input type="text" id="valorPagamento" name="valorPagamento">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="codigoVendedor">Código do Vendedor:</label>
+                    <input type="text" id="codigoVendedor" name="codigoVendedor">
+                </div>
+                <div class="form-group">
+                    <label for="formaCapitacao">Forma de Captação:</label>
+                    <input type="text" id="formaCapitacao" name="formaCapitacao">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nomeVendedor">Nome do Vendedor(a):</label>
+                <input type="text" id="nomeVendedor" name="nomeVendedor">
+            </div>
+            <div class="form-group">
+                <label for="cpfVendedor">CPF:</label>
+                <input type="text" id="cpfVendedor" name="cpfVendedor">
+            </div>
+        </section>
+
+        <button type="submit" id="gerarPdfBtn" >Gerar Documento</button>
+    
+    </form>
+    <div id="mensagem" class="hidden"></div> 
+            <div class="qrcode">
+                
+            </div>
+            <div class="informacoes-multimarcas">
+                <p>ACESSE AS NOSSAS REDES</p>
+                <p><a href="http://multimarcasconsorcios.com.br" target="_blank">multimarcasconsorcios.com.br</a></p>
+                <br>
+                <p>MULTIMARCAS ADMINISTRADORA DE CONSÓRCIOS LTDA</p>
+                <p>Av. Amazonas, 126, Centro - Belo Horizonte/MG</p>
+                <p>Fone: (31) 3065-8000 | Ouvidoria: 0800-727-1656</p>
+            </div>
+        </div>
+    </div>
+    
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>   
+    <script src="index.js" defer></script>
+</body>
+</html>
